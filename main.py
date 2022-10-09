@@ -1,3 +1,8 @@
+# Reference to build API and deploy to vercel from
+# https://dev.to/arctype/deploy-a-python-api-on-vercel-using-postgres-4871
+# Run `vercel .` to deploy changes
+# Delete the .env/env folder before run `vercel .` since will exceed the upload limit
+
 import jieba
 import json
 from fastapi import FastAPI
@@ -52,7 +57,7 @@ def parse_chinese_text(text):
 app = FastAPI()
 
 origins = [
-    "https://chinese-hsk-reader.surge.sh"
+    "https://chinese-hsk-reader.surge.sh", "http://localhost:3000"
 ]
 
 app.add_middleware(

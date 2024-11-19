@@ -57,7 +57,7 @@ def parse_chinese_text(text):
 app = FastAPI()
 
 origins = [
-    "https://chinese-hsk-reader.surge.sh", "http://localhost:3000"
+    "https://chinese-hsk-reader.surge.sh", "http://hsk-vocab-highlighter.surge.sh", "http://localhost:3000"
 ]
 
 app.add_middleware(
